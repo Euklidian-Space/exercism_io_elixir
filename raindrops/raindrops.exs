@@ -17,7 +17,7 @@ defmodule Raindrops do
   }
 
   def convert(number) do
-    Enum.reduce([3, 5, 7], "", fn(n, res) -> 
+    Enum.reduce(Map.keys(@dict), "", fn(n, res) -> 
       cond do 
         rem(number, n) == 0 -> res <> @dict[n]
 
